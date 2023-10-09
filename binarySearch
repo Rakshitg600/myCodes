@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+void bs(int x[], int n,int k){
+    int l,m,h=0;
+    h=n-1;
+    m=(l+h)/2;
+    while(l<=h){
+        if(x[m]==k){cout<<"found at "<<m+1; return ;}
+        else if(x[m]<k){
+                    l=m+1;
+                }
+        else{
+                h=m-1;
+            } 
+        m=(l+h)/2;    
+        }
+    cout<<"not found";    
+        
+    }
+int main()
+{
+    //implementing binary search 
+    int a[]={9,14,23,27,55,64,72};
+    int y=sizeof(a)/sizeof(int);
+    bs(a,y,72);
+    return 0;
+}
